@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .createTask,
+    .editTask {
+        @apply p-6 bg-indigo-200 rounded flex flex-col gap-2 max-w-sm;
+    input, 
+    textarea {
+        @apply rounded bg-indigo-300 border-2 text-indigo-700 border-indigo-400 px-4 py-2 font-semibold placeholder:text-indigo-500;
+    }
+    button {
+        @apply rounded bg-indigo-400 border-2 text-gray-50 tracking-wider font-semibold border-indigo-500 px-4 py-2 mt-2 hover:bg-indigo-500;
+    }
+}
+
+#modelWrapper {
+    @apply fixed h-screen w-screen top-0 left-0 bg-indigo-800/75 place-content-center;
+
+    #model {
+        @apply p-6 bg-indigo-200 rounded;
+
+        #editTask {
+            @apply bg-transparent;
+
+            .footer {
+                @apply mt-10 flex justify-end gap-2;
+                button {
+                    @apply py-1
+                }
+            }
+        }
+    }
+}
+    
+    .task {
+        @apply bg-pink-200 rounded px-4 py-2 min-w-[15rem] hover:scale-105 transition-transform ease-in-out;
+    }
+    .task p {
+        @apply text-gray-700 dark:text-gray-200 font-semibold;
+    }
+    .task small {
+        @apply text-gray-600;
+    }
+    .task .footer .controls button {
+        @apply text-[.9rem] font-semibold text-indigo-900 mr-2;
+    }
+  
+}

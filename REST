@@ -1,0 +1,26 @@
+### CREATE TASK
+POST http://localhost:8080/api/task/create 
+content-type: application/json
+
+{
+    "title": "abc",
+    "description": "xyz"
+}
+
+### GET ALL THE TASKS
+GET http://localhost:8080/api/tasks
+
+### GET SINGLE TASK
+GET http://localhost:8080/api/task/61fa6f4c6c7d9aafa785ac63
+
+
+### EDIT TASK
+PATCH  http://localhost:8080/api/task/edit/61fa6f4c6c7d9aafa785ac64
+content-type: application/json
+
+{
+    "title": "abcd"
+}
+
+### DELETE TASK
+DELETE   http://localhost:8080/api/task/delete/61fa6f466c7d9aafa785ac61

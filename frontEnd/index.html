@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class=''>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class='bg-gray-100 dark:bg-gray-600'>
+
+    <nav class='bg-indigo-400 h-16 shadow'>
+
+    </nav>
+
+    <main class='flex flex-col items-center pt-12'>
+            <form  id="createTask" class='createTask'>
+                <input type="text" name='title'  placeholder='Title'>
+                <textarea type="text" name='description' placeholder='Description......'></textarea>
+                
+                <button type='submit'>CREATE</button>
+            </form>
+
+        <div id="tasks" class="tasks grid grid-cols-3 mt-6 gap-4">
+            
+        </div>
+
+    </main>
+
+<div id="modelWrapper" class='hidden'>
+    <div id="model">
+        <div class="header text-center mb-4">
+            <h2>Edit Task</h2>
+        </div>
+        <form id="editTask" class='editTask py-0'>
+            <input type="hidden" name='id'>
+            <input type="text" name='title' >
+            <textarea type="text" name='description'></textarea>
+            <div class="footer">
+                <button type='button' id='cancelModel'>CANCEL</button>
+                <button type='submit'>UPDATE</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
