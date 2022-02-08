@@ -5,7 +5,7 @@ const express = require('express')
 const app = require("express")()
 
 
-const dbURI = "mongodb+srv://ashish757:ashish@testing.kxnnb.mongodb.net/TaskMaster?retryWrites=true&w=majority"
+const dbURI = "mongodb+srv://ashish757:<password>@testing.kxnnb.mongodb.net/TaskMaster?retryWrites=true&w=majority"
 
 mongoose.connect(dbURI)
     .then(result => app.listen(8080))
